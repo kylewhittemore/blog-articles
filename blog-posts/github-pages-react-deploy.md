@@ -27,7 +27,7 @@ Once you have created your repo on github you will be greeted with the following
 
 ![set origin image](../images/set-origin.png)
 
-Copy the link in the "..or push an existing repository from thee command line" section, and return to your terminal at the root of your new react app.
+Copy the link in the "..or push an existing repository from the command line" section, and return to your terminal at the root of your new react app.
 
 Now we will take our react app and point it at the github repo that we just created by running the scripts that you just copied from Github:
 
