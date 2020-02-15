@@ -63,7 +63,7 @@ Open your ``package.json`` file and find the ``"scripts"`` section.
 
 We will now add our ``"predeploy"`` and ``"deploy"`` scripts so that we can trigger a build and deployment from the command line.
 
-First we add will be our ``"deploy"`` script:
+First we will add our ``"deploy"`` script:
 
     "deploy": "gh-pages -d build"
 
