@@ -71,7 +71,7 @@ Open your ``package.json`` file and find the ``"scripts"`` section.
 
 We will now add our ``"predeploy"`` and ``"deploy"`` scripts so that we can trigger a build and deployment from the command line.
 
-First we add will be our ``"deploy"`` script:
+First we will add our ``"deploy"`` script:
 
     "deploy": "gh-pages -d build"
 
@@ -85,7 +85,7 @@ Even though this seems redundant, by declaring it as a ``predeploy`` script it w
 
 The gist of these additional scripts is that first, our application will be built, and then using the ``gh-pages`` package it will be deployed to github pages.
 
-The last step will be to declare the homepage that our users will visit to view your application.  We do this by adding a ``"homepage"`` value to our ``package.json"`` file as well. So add:
+The last step will be to declare the homepage that your users will visit to view your application.  We do this by adding a ``"homepage"`` value to our ``package.json"`` file as well. So add:
 
     "homepage": "https://<your username>.github.io/<your repo name>"
 
@@ -116,7 +116,7 @@ Now that we have made our configuration changes, we can do our usual git-routine
 
 Finally, we need to run our deploy script:
 
-    npm run build
+    npm run deploy
 
 This will trigger both the build, then deploy the build folder to our github page.
 
