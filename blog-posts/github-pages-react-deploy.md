@@ -13,6 +13,8 @@ When we actually deploy the application we need to deploy the same compiled sour
 
 ---
 
+## Setting up the repository:
+
 First lets create a new create-react-app by running 
     
     npx create-react-app <your-app-name>
@@ -40,6 +42,8 @@ If you copied the commands from github then you can just paste and both will be 
 Now your repo is all set up, open your repo in your code editor and lets get coding!
 
 ---
+
+## Setting up the app for deployment:
 
 First, we need to install the recommended (by the create-react-app team) package that will handle deploying our compiled app to Github pages. We will do this by running:
 
@@ -93,6 +97,8 @@ You can put this pretty much anywhere so long as it is not contained in another 
 
 ...
 ```
+---
+## Deployment:
 
 Now that we have made our configuration changes, we can do our usual git-routine to commit them to our github repo:
 
