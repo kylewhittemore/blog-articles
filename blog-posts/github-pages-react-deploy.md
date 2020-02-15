@@ -108,7 +108,7 @@ Now that we have made our configuration changes, we can do our usual git-routine
 
 Finally, we need to run our deploy script:
 
-    npm run build
+    npm run deploy
 
 This will trigger both the build, then deploy the build folder to our github page.
 
