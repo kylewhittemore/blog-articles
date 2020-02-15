@@ -138,5 +138,9 @@ Then we will scroll down to the Github pages section and ensure that we have the
 
 Alright! Now all you have do do is click the link and view your freshly deployed react application!  If you visit the link and get a ``404 error``, don't fret, it often takes a few minutes to actually be available.
 
+---
+### **Kyle Whittemore** 
+##### Last updated: 2/14/2020
+
 
 
