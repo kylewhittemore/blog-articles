@@ -21,11 +21,19 @@ First lets create a new create-react-app by running
 
 Once your app has been created, lets set it up as a new git repository on github.  Create a new **_empty_** repo, that is **_public_**, with the same name as the react app you just created.
 
+---
+
 ![push existing repo image](../images/new-repo.png)
+
+---
 
 Once you have created your repo on github you will be greeted with the following screen:
 
+---
+
 ![set origin image](../images/set-origin.png)
+
+---
 
 Copy the link in the "..or push an existing repository from thee command line" section, and return to your terminal at the root of your new react app.
 
@@ -114,11 +122,19 @@ This will trigger both the build, then deploy the build folder to our github pag
 
 Once that has completed, then last line in your terminal should read ``published``.  Now, lets head back to our repo and go to the settings tab:
 
+---
+
 ![repository settings](../images/settings.png)
+
+---
 
 Then we will scroll down to the Github pages section and ensure that we have the ``gh-pages`` branch selected:
 
+---
+
 ![github pages branch choice](../images/github-pages.png)
+
+---
 
 Alright! Now all you have do do is click the link and view your freshly deployed react application!  If you visit the link and get a ``404 error``, don't fret, it often takes a few minutes to actually be available.
 
