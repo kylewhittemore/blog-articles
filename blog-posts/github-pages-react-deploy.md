@@ -17,7 +17,7 @@ When we actually deploy the application we need to deploy the same compiled sour
 
 First lets create a new create-react-app by running 
     
-    npx create-react-app <your-app-name>
+    $ npx create-react-app <your-app-name>
 
 Once your app has been created, lets set it up as a new git repository on github.  Create a new **_empty_** repo, that is **_public_**, with the same name as the react app you just created.
 
@@ -39,11 +39,11 @@ Copy the link in the "..or push an existing repository from thee command line" s
 
 Now we will take our react app and point it at the github repo that we just created by running the scripts that you just copied from Github:
 
-    git remote add origin git@github.com:<your username>/<your repository name>.git
+    $ git remote add origin git@github.com:<your username>/<your repository name>.git
 
 and then push your newly configured repo up to git by running:
 
-    git push -u origin master
+    $ git push -u origin master
 
 If you copied the commands from github then you can just paste and both will be run. 
 
@@ -55,12 +55,13 @@ Now your repo is all set up, open your repo in your code editor and lets get cod
 
 First, we need to install the recommended (by the create-react-app team) package that will handle deploying our compiled app to Github pages. We will do this by running:
 
-    npm install gh-pages 
+    $ npm install gh-pages 
 
 Now we have to adjust our ``package.json`` file with a couple new scripts and declare the homepage that will render our app.
 
 Open your ``package.json`` file and find the ``"scripts"`` section.
-```
+
+```json
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -73,13 +74,16 @@ We will now add our ``"predeploy"`` and ``"deploy"`` scripts so that we can trig
 
 First we will add our ``"deploy"`` script:
 
-    "deploy": "gh-pages -d build"
-
+```json
+"deploy": "gh-pages -d build"
+```
 We will execute this script by running ``npm run deploy`` in our terminal, but not yet!
 
 Next we need to add a hook, which is a script that will run automatically when we run our ``deploy`` script.  So next we add:
 
+```json
     "predeploy": "npm run build"
+```
 
 Even though this seems redundant, by declaring it as a ``predeploy`` script it will trigger the ``build`` script automatically with every deploy as mentioned above.
 
@@ -87,10 +91,12 @@ The gist of these additional scripts is that first, our application will be buil
 
 The last step will be to declare the homepage that your users will visit to view your application.  We do this by adding a ``"homepage"`` value to our ``package.json"`` file as well. So add:
 
+```json
     "homepage": "https://<your username>.github.io/<your repo name>"
+```
 
 You can put this pretty much anywhere so long as it is not contained in another key-value object.  When you are done, it should look something like this:
-```
+```json
 ...
 
   "homepage": "https://<username>.github.io/<repo name>",
@@ -110,13 +116,13 @@ You can put this pretty much anywhere so long as it is not contained in another 
 
 Now that we have made our configuration changes, we can do our usual git-routine to commit them to our github repo:
 
-    git add .
-    git commit -m "prepared for Github pages deployment"
-    git push origin master
+    $ git add .
+    $ git commit -m "prepared for Github pages deployment"
+    $ git push origin master
 
 Finally, we need to run our deploy script:
 
-    npm run deploy
+    $ npm run deploy
 
 This will trigger both the build, then deploy the build folder to our github page.
 

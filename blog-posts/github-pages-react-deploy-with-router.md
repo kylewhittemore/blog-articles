@@ -14,11 +14,13 @@ Without getting into too much detail, the main difference is that ``<HashRouter>
 
 The ``<HashRouter>`` is basically a replacement for ``<BrowserRouter>`` and you should be able to drop it into your ``<App />`` component in the same manner. You will need to import it:
 
-    import { HashRouter, Route } from 'react-router-dom';
+```javascript
+import { HashRouter, Route } from 'react-router-dom';
+```
 
 and you will use it as a wrapper for all of your ``<Route>`` components:
 
-```
+```javascript
 const RouterComponent = () => {
   return (
     <HashRouter basename='/'>
